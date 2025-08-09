@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Mission Log</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTableWidget" name="missionTable">
+      <property name="editTriggers">
+       <set>QAbstractItemView::DoubleClicked|QAbstractItemView::SelectedClicked</set>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="windowTitle">
+    <string>MISSION EDITOR</string>
+   </property>
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="form_v_layout">
+     <item>
+      <widget class="QWidget" name="form_container" native="true">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelDate">
+            <property name="text">
+             <string>Date</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QDateTimeEdit" name="dateInput">
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+            <property name="displayFormat">
+             <string>yyyy-MM-dd</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="labelPlatform">
+            <property name="text">
+             <string>Platform</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="platformInput"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelChassis">
+            <property name="text">
+             <string>Chassis</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="chassisInput"/>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="labelCustomer">
+            <property name="text">
+             <string>Customer</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLineEdit" name="customerInput"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="labelSite">
+            <property name="text">
+             <string>Site</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="siteInput"/>
+          </item>
+          <item row="2" column="2">
+           <widget class="QLabel" name="labelAltitude">
+            <property name="text">
+             <string>Altitude (m)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QLineEdit" name="altitudeInput"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="labelSpeed">
+            <property name="text">
+             <string>Speed (m/s)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="speedInput"/>
+          </item>
+          <item row="3" column="2">
+           <widget class="QLabel" name="labelSpacing">
+            <property name="text">
+             <string>Spacing (m)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QLineEdit" name="spacingInput"/>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="labelSky">
+            <property name="text">
+             <string>Sky Conditions</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="skyInput">
+            <item>
+             <property name="text">
+              <string>Clear</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Few</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Scattered</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Broken</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Overcast</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QLabel" name="labelWind">
+            <property name="text">
+             <string>Wind (kts)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="3">
+           <widget class="QLineEdit" name="windInput"/>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="labelBattery">
+            <property name="text">
+             <string>Battery</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="batteryInput"/>
+          </item>
+          <item row="5" column="2">
+           <widget class="QLabel" name="labelFilesize">
+            <property name="text">
+             <string>Filesize (GB)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="3">
+           <widget class="QLineEdit" name="filesizeInput"/>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="labelTest">
+            <property name="text">
+             <string>Is Test?</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QCheckBox" name="isTestInput">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="2">
+           <widget class="QLabel" name="labelOutcome">
+            <property name="text">
+             <string>Outcome</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="3">
+           <widget class="QLineEdit" name="outcomeInput"/>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="labelHwIssues">
+            <property name="text">
+             <string>HW Issues</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="issuesHwInput"/>
+          </item>
+          <item row="7" column="2">
+           <widget class="QLabel" name="labelOperatorIssues">
+            <property name="text">
+             <string>Operator Issues</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="3">
+           <widget class="QLineEdit" name="issuesOperatorInput"/>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="labelSwIssues">
+            <property name="text">
+             <string>SW Issues</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QLineEdit" name="issuesSwInput"/>
+          </item>
+          <item row="9" column="0" colspan="4">
+           <widget class="QLabel" name="labelComments">
+            <property name="text">
+             <string>Comments</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0" colspan="4">
+           <widget class="QPlainTextEdit" name="commentsInput">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0" colspan="4">
+           <widget class="QLabel" name="labelRawMetar">
+            <property name="text">
+             <string>Raw METAR</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0" colspan="4">
+           <widget class="QPlainTextEdit" name="rawMetarInput">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>20</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="0" colspan="4">
+           <layout class="QHBoxLayout" name="buttonLayout">
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="updateMissionButton">
+              <property name="text">
+               <string>Update Mission</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="saveNewMissionButton">
+              <property name="text">
+               <string>Save New Mission</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
